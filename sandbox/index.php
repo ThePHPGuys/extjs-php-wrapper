@@ -1,6 +1,8 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
+//Alias
 use Ext\Core as Ext;
+
 
 
 $navigation = Ext::create('Ext.Panel.Panel',[
