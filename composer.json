@@ -1,0 +1,17 @@
+{
+    "name": "thephpguys/extjs-php-wrapper",
+    "description": "PHP wrapper for ExtJS",
+    "authors": [
+        {
+            "name": "Vadim Zotov",
+            "email": "vadimx@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Ext\\": "src/"
+        }
+    }
+}
