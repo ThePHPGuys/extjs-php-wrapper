@@ -18,11 +18,6 @@ class SerializableObject implements Serializable
 
 		foreach($this->properties as $key => $value) {
 			if (!in_array($key, $this->ignore)){
-
-				if ($value instanceof Serializable) {
-					$value = $value->properties();
-				}
-
 				$properties[$key] = $value;
 			}
 		}

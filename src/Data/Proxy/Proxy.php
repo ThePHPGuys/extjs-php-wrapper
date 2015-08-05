@@ -6,7 +6,6 @@ use Ext\Base;
 
 class Proxy extends Base
 {
-
 	public function setReader(){
 
 	}

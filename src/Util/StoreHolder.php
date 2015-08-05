@@ -25,6 +25,6 @@ trait StoreHolder
 	 * @return AbstractStore|null
 	 */
 	public function getStore(){
-		return $this->setProperty('store',$store);
+		return $this->getProperty('store');
 	}
 }

@@ -23,7 +23,14 @@ class ProxyStore extends AbstractStore
 		return $this->setProperty('autoLoad',$autoLoad);
 	}
 
-	public function setProxy(Proxy $proxy){
+	public function setProxy($proxy){
 		return $this->setProperty('proxy',$proxy);
 	}
+
+	public function getProxy(){
+		return $this->getProperty('proxy');
+	}
+
+
+
 }

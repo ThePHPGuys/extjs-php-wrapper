@@ -11,9 +11,4 @@ class Field extends Base
 		$this->setProperty('name',$name);
 	}
 
-	public static function factory($name){
-		$field = new self();
-		$field->setName($name);
-		return $field;
-	}
 }
