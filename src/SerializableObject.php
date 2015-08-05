@@ -56,4 +56,47 @@ class SerializableObject implements Serializable
 		return array_key_exists($key, $this->properties);
 	}
 
+	public function search($component,$class='\Ext\Base',$property=null,$propertyValue=null,$findFirst = false){
+		$return = [];
+		if(is_a($component, $class) and ($property==null or ($property!=null and $component->getProperty($property)==$propertyValue))){
+			if($findFirst){
+				return $component;
+			}else{
+				$return[] = $component;
+			}
+		}
+
+		if($foundComponents = $this->searchArray($component->properties(),$class,$property,$propertyValue,$findFirst)){
+			if($findFirst){
+				return $foundComponents;
+			}else{
+				$return = array_merge($return,$foundComponents);
+			}
+
+		}
+		return $return;
+	}
+
+	protected function searchArray($array,$class='\Ext\Base',$property=null,$propertyValue='',$findFirst = false){
+		$return = [];
+		foreach($array as $element){
+			$foundComponent = null;
+			if($element instanceof SerializableObject){
+				$foundComponent = $this->search($element,$class,$property,$propertyValue,$findFirst);
+			}elseif(is_array($element)){
+				$foundComponent = $this->searchArray($element,$class,$property,$propertyValue,$findFirst);
+			}
+
+			if($foundComponent) {
+				if ($findFirst) {
+					$return = $foundComponent;
+					break;
+				} else {
+					$return = array_merge($return, $foundComponent);
+				}
+			}
+		}
+		return $return;
+	}
+
 }

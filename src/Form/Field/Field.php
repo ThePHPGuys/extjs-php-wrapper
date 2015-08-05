@@ -19,6 +19,12 @@ trait Field
 	public function setName($name){
 		return $this->setProperty('name',$name);
 	}
+	
+	public function getName(){
+		return $this->getProperty('name');
+	}
+	
+	
 
 	/**
 	 * Setting this to false will prevent the field from being submitted even when it is not disabled.

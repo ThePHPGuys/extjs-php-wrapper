@@ -74,4 +74,22 @@ class Component extends Base
 		return $this->setProperty('frame',(bool)$frame);
 	}
 
+	public function findById($id){
+		return $this->search($this,'\Ext\Base','id',$id,true);
+	}
+
+	public function findByClass($class){
+		return $this->search($this,$class);
+	}
+	
+	public function setHidden($hidden){
+		return $this->setProperty('hidden',(bool)$hidden);
+	}
+	
+	public function getHidden(){
+		return $this->getProperty('hidden');
+	}
+	
+	
+
 }

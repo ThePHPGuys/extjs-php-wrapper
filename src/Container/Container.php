@@ -36,5 +36,15 @@ class Container extends Component
 		return $this->getProperty('plugins');
 	}
 
+	public function setAutoDestroy($autoDestroy){
+		return $this->setProperty('autoDestroy',$autoDestroy);
+	}
+
+	public function getAutoDestroy(){
+		return $this->getProperty('autoDestroy');
+	}
+
+
+
 
 }

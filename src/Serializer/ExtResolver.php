@@ -19,7 +19,7 @@ class ExtResolver
 			'\Ext\Grid\Column\Boolean' => ['xtype'=>'booleancolumn'],
 			'\Ext\Grid\Column\Column' => ['xtype'=>'gridcolumn'],
 
-			'\Ext\Button\Button' => ['xtype'=>'booleancolumn'],
+			'\Ext\Button\Button' => ['xtype'=>'button'],
 			'\Ext\Panel\Tool' => ['xtype'=>'tool'],
 			'\Ext\Panel\Header' => ['xtype'=>'header'],
 
@@ -35,6 +35,9 @@ class ExtResolver
 			'\Ext\Form\Field\ComboBox' => ['xtype'=>'combobox'],
 			'\Ext\Form\Field\Checkbox' => ['xtype'=>'checkbox'],
 			'\Ext\Form\Field\Text' => ['xtype'=>'textfield'],
+
+			'\Ext\Window\Toast' => ['xtype'=>'toast'],
+			'\Ext\Window\Window' => ['xtype'=>'window'],
 
 			'\Ext\Form\Panel' => ['xtype'=>'form'],
 			'\Ext\Grid\Panel' => ['xtype'=>'grid'],
