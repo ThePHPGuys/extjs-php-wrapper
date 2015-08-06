@@ -28,4 +28,14 @@ trait Bindable
 		return $this->getProperty('bind');
 	}
 
+	public function setViewModel($viewModel){
+		return $this->setProperty('viewModel',$viewModel);
+	}
+
+	public function getViewModel(){
+		return $this->getProperty('viewModel');
+	}
+
+
+
 }
