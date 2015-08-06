@@ -11,7 +11,7 @@ namespace Ext\Form;
 
 use Ext\Container\Container;
 
-class FieldContainer extends Container
+class FieldContainer extends Container implements LabelableInterface
 {
 	use Labelable;
 }

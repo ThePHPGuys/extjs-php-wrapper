@@ -11,11 +11,11 @@ namespace Ext\Form\Field;
 
 use Ext\Component;
 use Ext\Form\Labelable;
+use Ext\Form\LabelableInterface;
 
-abstract class Base extends Component
+abstract class Base extends Component implements FieldInterface,LabelableInterface
 {
 	use Field, Labelable;
-
 
 	/**
 	 * The id that will be given to the generated input DOM element. Defaults to an automatically generated id.

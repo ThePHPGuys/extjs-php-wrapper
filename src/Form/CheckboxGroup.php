@@ -9,11 +9,11 @@
 namespace Ext\Form;
 
 
-use Ext\Component;
 use Ext\Form\Field\Checkbox;
 use Ext\Form\Field\Field;
+use Ext\Form\Field\FieldInterface;
 
-class CheckboxGroup extends FieldContainer
+class CheckboxGroup extends FieldContainer implements FieldInterface
 {
 	use Field;
 

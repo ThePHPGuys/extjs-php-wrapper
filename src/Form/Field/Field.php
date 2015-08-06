@@ -32,8 +32,14 @@ trait Field
 	 * @return mixed
 	 */
 	public function setSubmitValue($submitValue){
-		return $this->setProperty('submitValue',(bool)$submitValue);
+		return $this->setProperty('submitValue',$submitValue);
 	}
+
+	public function getSubmitValue(){
+		return $this->getProperty('submitValue');
+	}
+
+
 
 	/**
 	 * True to disable the field. Disabled Fields will not be submitted.
@@ -44,6 +50,12 @@ trait Field
 		return $this->setProperty('disabled',(bool)$disabled);
 	}
 
+	public function getDisabled(){
+		return $this->getProperty('disabled');
+	}
+
+
+
 	/**
 	 * A value to initialize this field with.
 	 * @param $value
@@ -52,4 +64,10 @@ trait Field
 	public function setValue($value){
 		return $this->setProperty('value',$value);
 	}
+
+	public function getValue(){
+		return $this->getProperty('value');
+	}
+
+
 }
