@@ -70,7 +70,7 @@ class ExtResolver
 			'\Ext\Data\ArrayStore' => ['store'=>'array'],
 			'\Ext\Data\Store' => ['store'=>'store'],
 		];
-		return $xtypes+$proxies+$plugins;
+		return $xtypes+$proxies+$plugins+$stores;
 	}
 
 	public function resolve(Base $component){
