@@ -59,13 +59,16 @@ class ExtResolver
 			'\Ext\Data\Proxy\Server' => ['type'=>'server']
 		];
 		$plugins = [
-
 			'\Ext\Grid\Filters\Filters' => ['ptype'=>'gridfilters'],
 			'\Ext\Grid\Filters\Filter\Boolean' => ['type'=>'boolean'],
 			'\Ext\Grid\Filters\Filter\Date' => ['type'=>'date'],
 			'\Ext\Grid\Filters\Filter\Enum' => ['type'=>'list'],
 			'\Ext\Grid\Filters\Filter\Number' => ['type'=>'number'],
 			'\Ext\Grid\Filters\Filter\String' => ['type'=>'string'],
+		];
+		$stores = [
+			'\Ext\Data\ArrayStore' => ['store'=>'array'],
+			'\Ext\Data\Store' => ['store'=>'store'],
 		];
 		return $xtypes+$proxies+$plugins;
 	}
