@@ -30,6 +30,7 @@ class ExtResolver
 			'\Ext\Form\Field\Radio' => ['xtype'=>'radio'],
 			'\Ext\Form\Field\Hidden' => ['xtype'=>'hidden'],
 			'\Ext\Form\Field\File' => ['xtype'=>'filefield'],
+			'\Ext\Form\Field\Number' => ['xtype'=>'numberfield'],
 			'\Ext\Form\Field\Display' => ['xtype'=>'displayfield'],
 			'\Ext\Form\Field\Date' => ['xtype'=>'datefield'],
 			'\Ext\Form\Field\ComboBox' => ['xtype'=>'combobox'],
