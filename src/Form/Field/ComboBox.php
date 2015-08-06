@@ -40,4 +40,23 @@ class ComboBox extends Picker
 		return $this->getProperty('typeAhead');
 	}
 
+	public function setAutoSelect($autoSelect){
+		return $this->setProperty('autoSelect',$autoSelect);
+	}
+
+	public function getAutoSelect(){
+		return $this->getProperty('autoSelect');
+	}
+
+	public function setForceSelection($forceSelection){
+		return $this->setProperty('forceSelection',$forceSelection);
+	}
+
+	public function getForceSelection(){
+		return $this->getProperty('forceSelection');
+	}
+
+
+
+
 }
