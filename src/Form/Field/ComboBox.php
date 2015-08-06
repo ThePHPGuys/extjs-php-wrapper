@@ -41,7 +41,7 @@ class ComboBox extends Picker
 	}
 
 	public function setAutoSelect($autoSelect){
-		return $this->setProperty('autoSelect',$autoSelect);
+		return $this->setProperty('autoSelect',(bool)$autoSelect);
 	}
 
 	public function getAutoSelect(){
@@ -49,7 +49,7 @@ class ComboBox extends Picker
 	}
 
 	public function setForceSelection($forceSelection){
-		return $this->setProperty('forceSelection',$forceSelection);
+		return $this->setProperty('forceSelection',(bool)$forceSelection);
 	}
 
 	public function getForceSelection(){
