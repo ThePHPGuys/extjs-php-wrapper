@@ -56,6 +56,16 @@ class ComboBox extends Picker
 		return $this->getProperty('forceSelection');
 	}
 
+	public function setQueryMode($queryMode){
+		return $this->setProperty('queryMode',$queryMode);
+	}
+
+	public function getQueryMode(){
+		return $this->getProperty('queryMode');
+	}
+
+
+
 
 
 
