@@ -64,9 +64,12 @@ class ComboBox extends Picker
 		return $this->getProperty('queryMode');
 	}
 
+	public function setAutoLoadOnValue($autoLoadOnValue){
+		return $this->setProperty('autoLoadOnValue',$autoLoadOnValue);
+	}
 
-
-
-
+	public function getAutoLoadOnValue(){
+		return $this->getProperty('autoLoadOnValue');
+	}
 
 }
