@@ -30,6 +30,16 @@ class ProxyStore extends AbstractStore
 	public function getProxy(){
 		return $this->getProperty('proxy');
 	}
+	
+	public function setModel($model){
+		return $this->setProperty('model',$model);
+	}
+	
+	public function getModel(){
+		return $this->getProperty('model');
+	}
+	
+	
 
 
 
