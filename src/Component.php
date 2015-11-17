@@ -78,8 +78,8 @@ class Component extends Base
 		return $this->search($this,'\Ext\Base','id',$id,true);
 	}
 
-	public function findByClass($class){
-		return $this->search($this,$class);
+	public function findByClass($class,$findFirst=true){
+		return $this->search($this,$class,null,null,true);
 	}
 	
 	public function setHidden($hidden){
