@@ -12,7 +12,7 @@ use Ext\Serializable;
 use Ext\SerializableObject;
 use Ext\Serializer;
 
-class ArraySerializer
+class ArraySerializer implements Serializer
 {
 
     protected $resolver;
