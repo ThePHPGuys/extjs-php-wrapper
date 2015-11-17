@@ -171,7 +171,7 @@ $component = Ext::create('Ext.Container.Viewport',[
 ]);
 
 
-$componentJSON = $component->serialize(new \Ext\Serializer\Ext());
+$componentJSON = $component->serialize(new \Ext\Serializer\ExtSerializer());
 
 if(array_key_exists('json',$_REQUEST)){
     echo $componentJSON;
