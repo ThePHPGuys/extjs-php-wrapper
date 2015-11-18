@@ -56,7 +56,7 @@ class SerializableObject implements Serializable
 		return array_key_exists($key, $this->properties);
 	}
 
-	public function search($component,$class='\Ext\Base',$property=null,$propertyValue=null,$findFirst = false){
+	public static function search($component,$class='\Ext\Base',$property=null,$propertyValue=null,$findFirst = false){
 		$return = [];
 		if(is_a($component, $class) and ($property==null or ($property!=null and $component->getProperty($property)==$propertyValue))){
 			if($findFirst){
@@ -66,7 +66,7 @@ class SerializableObject implements Serializable
 			}
 		}
 
-		if($foundComponents = $this->searchArray($component->properties(),$class,$property,$propertyValue,$findFirst)){
+		if($foundComponents = static::searchArray($component->properties(),$class,$property,$propertyValue,$findFirst)){
 			if($findFirst){
 				return $foundComponents;
 			}else{
@@ -77,14 +77,14 @@ class SerializableObject implements Serializable
 		return $return;
 	}
 
-	protected function searchArray($array,$class='\Ext\Base',$property=null,$propertyValue='',$findFirst = false){
+	protected static function searchArray($array,$class='\Ext\Base',$property=null,$propertyValue='',$findFirst = false){
 		$return = [];
 		foreach($array as $element){
 			$foundComponent = null;
 			if($element instanceof SerializableObject){
-				$foundComponent = $this->search($element,$class,$property,$propertyValue,$findFirst);
+				$foundComponent = static::search($element,$class,$property,$propertyValue,$findFirst);
 			}elseif(is_array($element)){
-				$foundComponent = $this->searchArray($element,$class,$property,$propertyValue,$findFirst);
+				$foundComponent = static::searchArray($element,$class,$property,$propertyValue,$findFirst);
 			}
 
 			if($foundComponent) {
