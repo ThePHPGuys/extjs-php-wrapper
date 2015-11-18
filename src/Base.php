@@ -11,13 +11,15 @@ abstract class Base extends SerializableObject
 
 	function __construct(array $config=array())
 	{
+        $this->configure($config);
+
 		if($config){
 			$this->loadConfig($config);
 		}
-        $this->configure();
+
 	}
 
-    protected function configure(){
+    protected function configure(array $config){
 
     }
 
