@@ -59,6 +59,10 @@ class ExtResolver
 			'\Ext\Data\Proxy\Ajax' => ['type'=>'ajax'],
 			'\Ext\Data\Proxy\Server' => ['type'=>'server']
 		];
+        $readers = [
+            '\Ext\Data\Reader\Json' => ['type'=>'json'],
+            '\Ext\Data\Reader\Reader' => ['type'=>'base'],
+        ];
 		$plugins = [
 			'\Ext\Grid\Filters\Filters' => ['ptype'=>'gridfilters'],
 			'\Ext\Grid\Filters\Filter\Boolean' => ['type'=>'boolean'],
@@ -71,7 +75,7 @@ class ExtResolver
 			'\Ext\Data\ArrayStore' => ['store'=>'array'],
 			'\Ext\Data\Store' => ['store'=>'store'],
 		];
-		return $xtypes+$proxies+$plugins+$stores;
+		return $xtypes+$readers+ $proxies+$plugins+$stores;
 	}
 
 	public function resolve(Base $component){
