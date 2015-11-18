@@ -14,7 +14,12 @@ abstract class Base extends SerializableObject
 		if($config){
 			$this->loadConfig($config);
 		}
+        $this->configure();
 	}
+
+    protected function configure(){
+
+    }
 
 	private function loadConfig($config){
 		foreach($config as $key=>$value){
