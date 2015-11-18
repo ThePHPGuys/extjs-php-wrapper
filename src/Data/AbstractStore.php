@@ -35,6 +35,10 @@ class AbstractStore extends Base
 		return $this->setProperty('storeId',$storeId);
 	}
 
+    public function getStoreId(){
+        return $this->getProperty('storeId');
+    }
+
 	/**
 	 * The number of records considered to form a 'page'. This is used to power the built-in paging using the nextPage
 	 * and previousPage functions when the grid is paged using a PagingToolbar
@@ -44,4 +48,8 @@ class AbstractStore extends Base
 	public function setPageSize($pageSize){
 		return $this->setProperty('pageSize',$pageSize);
 	}
+
+    public function getPageSize(){
+        return $this->getProperty('pageSize');
+    }
 }
